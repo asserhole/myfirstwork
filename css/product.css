@@ -39,13 +39,12 @@
 #small{
 	width: 400px;
 	height: 400px;
-	border:1px solid;
 	position: relative;
-	left:50px;
-	top:150px;
 	cursor:move;
 }
-
+#spic{
+	vertical-align: top;
+}
 #len{
 	width: 200px;
 	height: 200px;
@@ -58,12 +57,12 @@
 #big{
 	width: 400px;
 	height: 400px;
-	border:1px solid;
-	position: relative;
-	left:400px;
-	top:150px;
+	position: absolute;
+	left:427px;
+	top:202px;
 	overflow: hidden;
 	display: none;
+	z-index: 200;
 }
 #bigpic{
 	position: absolute;
@@ -83,11 +82,9 @@
 	margin-bottom: 40px;
 }
 .content_left .goods_detail .bigimg{
-	width: 400px;
-	padding-top: 10px;
-	height: 400px;
 	overflow: hidden;
 	text-align: center;
+	margin-top: 10px;
 }
 .content_left .goods_detail .goods_txt{
 	float: left;

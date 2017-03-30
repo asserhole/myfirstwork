@@ -36,7 +36,7 @@
 		<div class="content_left l">
 			<div class="goods_detail clr">
 				<div class="bigimg l" id="small">
-					<img src="/myfirstwork/imgs/big/1.jpg">
+					<img src="/myfirstwork/imgs/big/1.jpg" id="spic">
 					<div id="len"></div>
 				</div>
 				<div id="big">
@@ -91,7 +91,7 @@
 						</div>
 						<div class="goods_otherbtn">
 							<a href="javascript:;" class="btn">立即定制</a>
-							<a href="javascript:;" class="addcart">
+							<a href="javascript:;" class="addcart" id="addbtn">
 								<i></i>
 								加入购物车
 							</a>
@@ -211,9 +211,78 @@
 				})
 			}
 
+			shopcartcount ();
+			
+		})
+
+		
+
+
+
+		
+
+
+		//添加到购物车
+		$('#addbtn').click(function  (e) {
+			var _src = '/myfirstwork/imgs/hot/13.jpg';
+
+			var _price = 49;
+
+			var _name = '魅族 MX4 pro 保护壳-猫头鹰';
+
+			var _id = '416-A488546';
+
+			var _count = parseFloat($('#total').val());
+
+			$.cookie.json = true;
+
+			var _products = $.cookie('products') || [];
+
+			var index = exist(_src, _products);
+
+			if(index === -1){
+				_products.push({
+					src: _src,
+					name: _name,
+					id: _id,
+					price: _price,
+					count: _count
+
+				})
+			}else{
+				var numC = _products[index].count + _count;
+				_products[index].count = numC;
+			}
+
+			$.cookie('products', _products, {expires:7,path:'/'});
+
+			shopcartcount ();
+
+			window.location = '/myfirstwork/html/shopcart.html';
 
 			
 		})
+
+		//+按钮
+		$('.plus').click(function  () {
+			var n = $('#total').val();
+			n++;
+			$('#total').val(n);
+		});
+
+		//-按钮
+		$('.minus').click(function  () {
+			var n = $('#total').val();
+			if(n>1){
+				n--;
+				$('#total').val(n);
+			}
+		});
+
+		
+		
+		
+
 
 
 
@@ -221,13 +290,13 @@
 		var $Small = $('#small');
 		var $Big = $('#big');
 		var $Len = $('#len');
-		var oSmallWidth = $Small[0].clientWidth;
-		var oSmallHeight = $Small[0].clientHeight;
+		var oSmallWidth = $Small.width();
+		var oSmallHeight = $Small.height();
 
-		var oLenWidth = parseInt($Len.css('width'));
-		var oLenHeight = parseInt($Len.css('height'));
-		var oBigWidth = parseInt($Big.css('width'));
-		var oBigHeight = parseInt($Big.css('height'));
+		var oLenWidth = $Len.width();
+		var oLenHeight = $Len.height();
+		var oBigWidth = $Big.width();
+		var oBigHeight = $Big.height();
 		var $bigpic = $('#bigpic');
 		var $spic = $('#spic');
 
@@ -268,7 +337,35 @@
 
 			$bigpic.css({left:-_left*rateX,top:-_top*rateY});
 			
-		});
+		})
+
+
+
+		// 函数
+		function exist (_src,arr) {
+			for(var i=0;i<arr.length;i++){
+				if(arr[i].src === _src){
+					return i;
+				}
+			}
+			return -1;
+		}
+
+
+		function shopcartcount () {
+			$.cookie.json = true;
+
+			var _products = $.cookie('products') || [];
+			if(_products.length !== 0){
+				var num = 0;
+				$.each(_products, function  (i, ele) {
+					num += ele.count;
+				})
+
+				$('#cart_num').text(num);
+
+			}
+		}
 
 		
 
