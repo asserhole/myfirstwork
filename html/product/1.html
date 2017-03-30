@@ -35,8 +35,12 @@
 	<div class="content container clr">
 		<div class="content_left l">
 			<div class="goods_detail clr">
-				<div class="bigimg l">
+				<div class="bigimg l" id="small">
 					<img src="/myfirstwork/imgs/big/1.jpg">
+					<div id="len"></div>
+				</div>
+				<div id="big">
+					<img src="/myfirstwork/imgs/big/1.jpg" alt="" id="bigpic">
 				</div>
 				<form id="form_cart">
 					<div class="goods_txt">
@@ -210,6 +214,61 @@
 
 			
 		})
+
+
+
+		//放大镜
+		var $Small = $('#small');
+		var $Big = $('#big');
+		var $Len = $('#len');
+		var oSmallWidth = $Small[0].clientWidth;
+		var oSmallHeight = $Small[0].clientHeight;
+
+		var oLenWidth = parseInt($Len.css('width'));
+		var oLenHeight = parseInt($Len.css('height'));
+		var oBigWidth = parseInt($Big.css('width'));
+		var oBigHeight = parseInt($Big.css('height'));
+		var $bigpic = $('#bigpic');
+		var $spic = $('#spic');
+
+		var rateX = oSmallWidth/oLenWidth;
+		var rateY = oSmallHeight/oLenHeight;
+
+		$spic.css('width',oSmallWidth);
+		$spic.css('height',oSmallHeight);
+
+		$bigpic.css('width',oSmallWidth*rateX);
+		$bigpic.css('height',oSmallHeight*rateY);
+
+		$Small.mouseenter(function  () {
+			$Len.show();
+			$Big.show();
+		})
+
+		$Small.mouseleave(function  () {
+			$Len.hide();
+			$Big.hide();
+		})
+
+		$Small.mousemove(function  (e) {
+			$Len.offset({
+				top:e.pageY - oLenHeight/2,
+				left:e.pageX - oLenWidth/2
+			});
+			
+			var _left = $Len.position().left;
+			var _top = $Len.position().top;
+
+			if(_left<0){_left=0};
+			if(_top<0){_top=0};
+			if(_left>oSmallWidth-oLenWidth){_left=oSmallWidth-oLenWidth};
+			if(_top>oSmallHeight-oLenHeight){_top=oSmallHeight-oLenHeight};
+
+			$Len.css({left:_left,top:_top});
+
+			$bigpic.css({left:-_left*rateX,top:-_top*rateY});
+			
+		});
 
 		
 

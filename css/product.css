@@ -35,7 +35,39 @@
 
 
 
+/*放大镜*/
+#small{
+	width: 400px;
+	height: 400px;
+	border:1px solid;
+	position: relative;
+	left:50px;
+	top:150px;
+	cursor:move;
+}
 
+#len{
+	width: 200px;
+	height: 200px;
+	background: rgba(0,0,0,0.3);
+	position: absolute;
+	left:0;
+	top: 0;
+	display: none;
+}
+#big{
+	width: 400px;
+	height: 400px;
+	border:1px solid;
+	position: relative;
+	left:400px;
+	top:150px;
+	overflow: hidden;
+	display: none;
+}
+#bigpic{
+	position: absolute;
+}
 
 
 /*商品详情*/

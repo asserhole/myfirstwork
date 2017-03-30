@@ -280,6 +280,7 @@
 			$(this).parents('.item_row').remove();
 
 			shopcartcount ();
+			_sum ();
 
 
 
@@ -323,7 +324,7 @@
 				_tr.find('.xiaoji').text(count*_tr.data('product').price);
 
 				shopcartcount ();
-
+				_sum ();
 			}
 		})
 
@@ -346,6 +347,7 @@
 			_tr.find('.xiaoji').text(count*_tr.data('product').price);
 
 			shopcartcount ();
+			_sum ();
 		})
 
 
@@ -367,6 +369,7 @@
 			_tr.find('.xiaoji').text($(this).val()*_tr.data('product').price);
 
 			shopcartcount ();
+			_sum ();
 			
 		})
 
