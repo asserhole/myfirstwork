@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手机工坊</title>
+	<link rel="stylesheet" href="/myfirstwork/css/base.css">
+	<link rel="stylesheet" href="/myfirstwork/css/reset.css">
+	<link rel="stylesheet" href="/myfirstwork/css/confirm.css">
+	<script src="/myfirstwork/js/jquery-1.12.4.min.js"></script>
+	<script src="/myfirstwork/js/jquery.cookie.js"></script>
+	<script src="/myfirstwork/js/template-native.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="container top" id="header"></div>
+	
+
+
+	<!-- 导航 -->
+	<div class="nav-wrap" id="nav"></div>
+
+
+
+
+
+
+
+
+	<!-- 面包屑导航 -->
+	<ul class="container breadcrumb">
+		<li>您当前的位置：&nbsp;</li>
+		<li><a href="/myfirstwork/index.html">首页</a><span class="divider">>></span></li>
+		<li>提交订单</li>
+	</ul>
+
+
+
+
+
+
+	<!-- 购物车列表 -->
+	<form id="form_order" class="container" action="">
+		<div class="plbox">
+			<ul class="clr">
+				<li class="path">1.查看购物车</li>
+				<li class="path active">2.确认订单信息</li>
+				<li class="path">3.付款</li>
+				<li class="path">4.购买成功</li>
+			</ul>
+		</div>
+		<div class="address">
+			<div class="confirm_title">
+				收货地址
+				<span>
+					<a href="javascript:;">管理收货地址</a>
+				</span>
+			</div>
+			<div class="add_address" id="t1">
+				<dl class="row_item">
+					<dt>收货人：</dt>
+					<dd>
+						<input type="text" id="consignee">
+						<span class="need">*</span>
+					</dd>
+				</dl>
+				<dl class="row_item">
+					<dt>省/市/区：</dt>
+					<dd>
+						<select name="province" id="province">
+							<option>选择省</option>
+						</select>
+						<select name="city" id="city"><option>选择市</option></select>
+						<select name="district" id="district"><option>选择县/区</option></select>
+						<span class="need">*</span>
+					</dd>
+				</dl>
+				<dl class="row_item">
+					<dt>详细地址：</dt>
+					<dd>
+						<input type="text" id="address" class="input_xlong" name="address" maxlength="200">
+						<span class="need">*</span>
+						<span class="tip">(请填写您的详细地址,不需要重复填写省/市/地区。)</span>
+					</dd>
+				</dl>
+				<dl class="row_item">
+					<dt>手机号码：</dt>
+					<dd>
+						<input type="text" id="phone" class="input_small" name="phone" maxlength="20">
+						<span class="need">*</span>
+					</dd>
+				</dl>
+				<dl class="row_item">
+					<dt>保存地址：</dt>
+					<dd>
+						<label>
+							<input type="checkbox" class="checkbox" id="savead" value="1" checked>
+							保存为常用地址
+						</label>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="confirmlist">
+			<div class="confirm_title">
+				商品清单
+				<span>
+					<a href="/myfirstwork/html/shopcart.html">返回修改购物车</a>
+				</span>
+			</div>
+			<table class="concom" width="100%" border="0">
+				<thead>
+					<tr>
+						<th>商品名称</th>
+						<th width="15%">商品编号</th>
+						<th width="15%">单价(RMB)</th>
+						<th width="15%">数量</th>
+						<th width="15%">小计</th>
+					</tr>
+				</thead>
+				<tbody id="confirmbox">
+
+				</tbody>
+			</table>
+		</div>
+		<div class="common">
+			<div class="confirm_title">配送方式</div>
+			<dl class="common_item act clr">
+				<dt>申通速递</dt>
+				<dd>
+					<p>手机工坊全场商品默认申通速递全国包邮(不含港、澳、台),申通不覆盖区域默认发送EMS速递。</p>
+				</dd>
+			</dl>
+			<dl class="common_item clr">
+				<dt>顺丰速递</dt>
+				<dd>
+					<p>顺丰速递请确认可覆盖区域后选择，不支持港、澳、台地区。</p>
+					<p>运费：
+						<span>
+							￥
+							<b style="fontsize:16px;font-family:tahoma;">18</b>
+						</span>
+					</p>
+				</dd>
+			</dl>
+			<dl class="common_item clr">
+				<dt>顺丰到付</dt>
+				<dd>
+					<p>顺丰到付支持全国及港、澳、台地区，运费由用户支付，如有拒收用户承担双向邮费。</p>
+				</dd>
+			</dl>
+
+		</div>
+		<div class="common">
+			<div class="confirm_title">其他信息</div>
+			<dl class="remarkbox">
+				<dt>订单备注</dt>
+				<dd>
+					<input type="text" id="orderremark" class="remark" maxlength="50" placeholder=" 可填写其它要求备注信息,最多50字">
+				</dd>
+			</dl>
+		</div>
+		<div class="pay" id="total">
+			<div class="it">
+				商品总金额：
+				<span class="mainfont" id="totalmoney">￥0.00</span>
+			</div>
+			<div class="it">
+				运费：
+				<span class="mainfont">￥00.00</span>
+			</div>
+			<div class="it" id="sum">
+				共计需支付：
+				<span class="mainfont" id="finalpay">￥0.00</span>
+			</div>
+		</div>
+		<div class="pay" id="total_s" style="display:none;">
+			<div class="it">
+				商品总金额：
+				<span class="mainfont" id="totalmoney_s">￥0.00</span>
+			</div>
+			<div class="it">
+				运费：
+				<span class="mainfont">￥18.00</span>
+			</div>
+			<div class="it" id="sum">
+				共计需支付：
+				<span class="mainfont" id="finalpay_s">￥0.00</span>
+			</div>
+		</div>
+		<div class="submitbox">
+			<input type="submit" value="提交订单" class="btn">
+		</div>
+	</form>
+
+
+
+
+
+	
+
+
+
+
+	
+	
+
+
+	
+
+
+
+
+	
+	<!-- footer -->
+	<div class="footer container" id="footer"></div>
+
+
+
+	<!-- 模板: artTemplate模板引擎 -->
+	<script type="text/html" id="temp">
+		
+		<% for (var i = 0; i < products.length; i++) { %>
+		<tr>
+			<td>
+				<dl class="shop_item">
+					<dt>
+						<a href="javascript:;">
+							<img src="<%= products[i].src %>" width="80" height="80">
+						</a>
+					</dt>
+					<dd>
+						<p>
+							<a href="javascript:;"><%= products[i].name %></a>
+							<span class="co2">浮雕</span>
+						</p>
+						
+						<p>PC硬壳 (透明)</p>
+					</dd>
+				</dl>
+			</td>
+			<td><%= products[i].id %></td>
+			<td>￥<%= products[i].price %>.00</td>
+			<td><%= products[i].count %></td>
+			<td>￥<span class="xiaoji"><%= products[i].price*products[i].count %></span>.00</td>
+		</tr>
+		<% } %>
+			
+
+			
+		
+	</script>
+
+	<script>
+		$('#footer').load('/myfirstwork/html/base/footer.html');
+		$('#nav').load('/myfirstwork/html/base/nav.html');
+
+
+
+
+		//判断是否登录
+		$.ajax('/myfirstwork/html/base/header.html').done(function  (data) {
+			$.cookie.json = true;
+			var user = $.cookie('loginuser') || {};
+			if($.isEmptyObject(user)){
+				$(data).appendTo('#header');
+			}else{
+				$(data).appendTo('#header').find('#login').html('<span>Hi,<a href="/myfirstwork/html/product/1.html" style="padding:0;font-weight:bold">[ '+user.username+' ]</a></span><em>|</em><a href="javascript:;" id="eixt">退出</a>');
+				$('#eixt').click(function  () {
+					$.cookie.json = true;
+					$.cookie('loginuser',null,{expires:-7, path:'/'});
+
+					window.location = '/myfirstwork/index.html';
+				})
+			}
+
+			shopcartcount();
+
+			
+		})
+
+
+		//省市区三级级联
+		var addresses = {};
+
+		$.ajax('/myfirstwork/json/addresses.json').done(function  (data) {
+			var provinces = data.regions;
+
+			provinces.forEach(function  (i) {
+				addresses[i.name] = {};
+
+				var cities = i.regions || [];
+				cities.forEach(function  (j) {
+					addresses[i.name][j.name] = j.regions;
+				})
+			})
+
+			addresses['选择省'] = {'选择市': [{name:'选择县/区'}]};
+
+			
+			
+			initProvince();
+		})
+			
+
+			$('#province').change(initCity);
+			$('#city').change(initDistrict);
+
+			function initProvince () {
+				var html = '';
+
+				for(var attr in addresses){
+					html += '<option value="'+attr+'">'+attr+'</option>';
+
+				};
+
+				$('#province').append(html);
+				
+				initCity();
+			}
+
+			function initCity () {
+				var html = '';
+				var currentProvince = $('#province').val();
+				var cities = addresses[currentProvince];
+				
+
+				for(var attr in cities){
+					html += '<option value="'+attr+'">'+attr+'</option>';
+				}
+				$('#city').empty().append(html);
+
+				initDistrict();
+			}
+
+			function initDistrict () {
+				var html = '';
+				var currentProvince = $('#province').val();
+				var currentCity = $('#city').val();
+
+				var districts = addresses[currentProvince][currentCity] || [];
+
+				districts.forEach(function  (a) {
+					html += '<option value="'+a.name+'">'+a.name+'</option>'
+				})
+
+				$('#district').empty().append(html);
+
+
+			}
+
+
+		
+		
+
+		
+		
+
+		
+		//初始化商品确认清单
+		$.cookie.json = true;
+		var _products = $.cookie('products');
+		var data = {
+			products : _products
+		};
+
+		var html = template('temp', data);
+		$('#confirmbox').html(html);
+
+		
+
+		
+
+		
+		
+
+
+
+		//购物车按钮数量累计
+		function shopcartcount () {
+			$.cookie.json = true;
+
+			var _products = $.cookie('products');
+			
+			if(_products.length !== 0){
+				var num = 0;
+				$.each(_products, function  (i, ele) {
+					num += parseFloat(ele.count);
+				})
+
+				$('#cart_num').text(num);
+
+			}
+		}
+
+
+
+		//选择配送方式
+		$('.common_item').click(function  () {
+			$('.common_item').removeClass('act');
+			$(this).addClass('act');
+
+			var i = $('.common_item').index($('.act'));
+			
+			if(i===1){
+				$('#total_s').show();
+				$('#total').hide();
+			}else{
+				$('#total_s').hide();
+				$('#total').show();
+			}
+
+		})
+
+		
+
+
+		
+		
+
+		
+
+
+
+			
+
+
+		
+
+
+		//总计
+		function _sum () {
+			var sum = 0;
+			var _xiaoji = $('.xiaoji');
+			$.each(_xiaoji, function  (i, ele) {
+				sum += parseFloat(ele.innerHTML);
+			})
+			var sum_s = sum + 18;
+			
+			$('#totalmoney').text('￥'+sum+'.00');
+			$('#totalmoney_s').text('￥'+sum+'.00');
+			$('#finalpay').text('￥'+sum+'.00');
+			$('#finalpay_s').text('￥'+sum_s+'.00');
+		}
+
+		 _sum ();
+
+
+
+
+		
+
+		
+
+
+
+		
+	</script>
+</body>
+</html>

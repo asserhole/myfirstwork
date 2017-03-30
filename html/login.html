@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手机工坊</title>
+	<link rel="stylesheet" href="/myfirstwork/css/base.css">
+	<link rel="stylesheet" href="/myfirstwork/css/reset.css">
+	<link rel="stylesheet" href="/myfirstwork/css/login.css">
+	<script src="/myfirstwork/js/jquery-1.12.4.min.js"></script>
+	<script src="/myfirstwork/js/jquery.cookie.js"></script>
+
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="container top" id="header"></div>
+	
+
+
+	<!-- 导航 -->
+	<div class="nav-wrap" id="nav"></div>
+
+
+
+	<!-- 登录 -->
+	<div class="container reg">
+		<form id="reg_form" class="l_form">
+			<dl class="input_dl">
+				<dt>登录</dt>
+				<dd class="user_dd">
+					<input type="text" id="username" class="text username" name="username" autocomplete="off" placeholder="邮箱/用户名" required="true">
+					<p>
+						<label for="login_username" id="reg_uname" class="error"></label>
+					</p>
+				</dd>
+				<dd class="passw_dd">
+					<input type="password" id="password" class="text password" name="password" maxlength="20" autocomplete="off" placeholder="密码" required="true">
+					<p>
+						<label for="login_password" id="reg_pwd1" class="error"></label>
+					</p>
+				</dd>
+			</dl>
+			<div class="enter">
+				<input type="submit" value="立即登录" class="btn" name="login_submit" id="loginbtn">
+			</div>
+			<p class="tr">
+				<a href="javascript:;" class="r">忘记密码?</a>
+				还没账号?
+				<a href="/myfirstwork/html/reg.html">注册</a>
+			</p>
+		</form>
+	</div>
+	
+
+
+
+
+	
+
+
+
+	<!-- footer -->
+	<div class="footer container" id="footer"></div>
+
+	<script>
+		$('#header').load('/myfirstwork/html/base/header.html');
+		$('#footer').load('/myfirstwork/html/base/footer.html');
+		$('#nav').load('/myfirstwork/html/base/nav.html');
+
+		$('#loginbtn').click(function  () {
+			if($('#username')[0].value.search('@') === -1){
+				$.post('/myfirstwork/php/login.php', {
+					username:$('#username').val(),
+					password:$('#password').val()
+
+				}, function  (data) {
+					if(data.status === 1){
+						var user = data.userinfo;
+						$.cookie.json = true;
+						$.cookie('loginuser', user, {expires:7, path:'/'});
+						alert('登录成功! '+user.username+' 欢迎回来!');
+
+						window.location = '/myfirstwork/index.html';
+					}else{
+						alert('用户名或密码错误，请重试！');
+
+						window.location = '/myfirstwork/html/login.html';
+					}
+				},"json")
+			}else{
+				$.post('/myfirstwork/php/login.php', {
+					email:$('#username').val(),
+					password:$('#password').val()
+
+				}, function  (data) {
+					if(data.status === 1){
+						var user = data.userinfo;
+						$.cookie.json = true;
+						$.cookie('loginuser', user, {expires:7, path:'/'});
+						alert('登录成功! '+user.username+' 欢迎回来!');
+
+						window.location = '/myfirstwork/index.html';
+					}else{
+						alert('邮箱或密码错误，请重试！');
+
+						window.location = '/myfirstwork/html/login.html';
+					}
+				},"json")
+			}
+
+			return false;
+		})
+
+
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+/*隐藏商品详情页面*/
+#nav .nav .nav-cate #menulist{
+	display: none;
+	border:1px solid #f8f8f8;
+	border-top:0;
+}
+
+#nav .nav .nav-cate:hover>#menulist{
+	display: block;
+}
+
+
+/*面包屑导航*/
+.breadcrumb {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 14px;
+    color: #999;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
+}
+.breadcrumb li{
+	float: left;
+}
+.breadcrumb li a{
+	color: #8c8c8c;
+}
+.breadcrumb li a:hover{
+	color: #000;
+}
+.breadcrumb li .divider{
+	margin: 0 8px;
+}
+
+
+/*我的购物车*/
+.cart .cart_state{
+	height: 36px;
+	line-height: 36px;
+	padding-left: 16px;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	font-size: 18px;
+}
+.cart .cart_state span{
+	font-size: 12px;
+	margin-left: 12px;
+	color: #666;
+}
+.cart .cart_title{
+	height: 30px;
+	line-height: 30px;
+	background: #eee;
+}
+.cart  .col{
+	float: left;
+	text-align: center;
+}
+.cart  .col_1{
+	width: 50%;
+}
+.cart  .col_2{
+	width: 15%;
+}
+.cart  .col_3{
+	width: 15%;
+}
+.cart  .col_4{
+	width: 10%;
+}
+.cart  .col_5{
+	width: 10%;
+}
+.cart .item_row{
+	height: 200px;
+	border-bottom: 1px solid #bbb;
+}
+.item_row .shop_goods {
+    position: relative;
+}
+.item_row .sg_img{
+	float: left;
+	padding: 25px;
+	width: 150px;
+	height: 150px;
+}
+.item_row .sg_info{
+	margin-left: 200px;
+}
+.item_row .sg_info .sg_name{
+	padding-top: 36px;
+	line-height: 30px;
+	font-size: 16px;
+	padding-left: 20px;
+	text-align: left;
+}
+.item_row .sg_info .sg_name .co2{
+	background: #3477fc;
+	padding: 2px 9px;
+	color: #fff;
+}
+.item_row .sg_info .sg_name .co1{
+	background: #f51180;
+	padding: 2px 9px;
+	color: #fff;
+}
+.item_row .sg_info .sg_other{
+	padding-left: 20px;
+	padding-top: 10px;
+	text-align: left;
+}
+.item_row .sg_info .sg_other .sg_txt{
+	display: inline-block;
+	margin: 10px;
+	margin-left: 0;
+}
+.item_row .col_2{
+	padding-top: 50px;
+	font-size: 14px;
+}
+.item_row .col_3{
+	padding-top: 88px;
+}
+.item_row .col_3 .control{
+	position: relative;
+	height: 24px;
+	width: 82px;
+	display: inline-block;
+}
+.item_row .col_3 .control a{
+	color: #8c8c8c;
+}
+.control .minus, .control .plus {
+    display: block;
+    float: left;
+    background: #fff;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+.control .quantity {
+    float: left;
+    width: 32px;
+    height: 22px;
+    line-height: 20px;
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.item_row .col_4{
+	padding-top: 88px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #dc2425;
+}
+.item_row .col_5{
+	padding-top: 90px;
+}
+.item_row .col_5 a{
+	color: #8c8c8c;
+}
+
+
+
+.shop_count{
+	height: 100px;
+	line-height: 100px;
+	text-align: right;
+	font-size: 14px;
+	padding-right: 30px;
+}
+.shop_count a{
+	color: #8c8c8c;
+}
+.shop_count span{
+	color: #dc2425;
+}
+.shop_count span strong{
+	font-size: 30px;
+	font-weight: bold;
+}
+.shop_other{
+	padding-top: 30px;
+	height: 40px;
+}
+.shop_other ul{
+	float: left;
+	line-height: 40px;
+	height: 40px;
+}
+.shop_other ul li a{
+	background: #404144;border-radius: 3px;
+	background-clip: padding-box;
+	color: #fff;
+	padding: 3px 12px;
+}
+.shop_other .shop_mainbox{
+	float: right;
+}
+.shop_other .shop_mainbox a{
+	color: #8c8c8c;
+}
+.shop_other .shop_mainbox .btn{
+	padding: 12px 42px;
+	margin-left: 30px;
+	display: inline-block;
+	color: #fff;
+	font-size: 14px;
+	line-height: 14px;
+	background: #dc2425;
+	border-radius: 3px;border: none;
+}

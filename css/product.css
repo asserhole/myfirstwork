@@ -1,0 +1,284 @@
+/*隐藏商品详情页面*/
+#nav .nav .nav-cate #menulist{
+	display: none;
+	border:1px solid #f8f8f8;
+	border-top:0;
+}
+
+#nav .nav .nav-cate:hover>#menulist{
+	display: block;
+}
+
+
+
+/*面包屑导航*/
+.breadcrumb {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 14px;
+    color: #999;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
+}
+.breadcrumb li{
+	float: left;
+}
+.breadcrumb li a{
+	color: #8c8c8c;
+}
+.breadcrumb li a:hover{
+	color: #000;
+}
+.breadcrumb li .divider{
+	margin: 0 8px;
+}
+
+
+
+
+
+
+/*商品详情*/
+.content{
+	margin-bottom: 20px;
+}
+.content_left{
+	float: left;
+	width: 980px;
+	margin-right: 20px;
+}
+.content_left .goods_detail{
+	margin-bottom: 40px;
+}
+.content_left .goods_detail .bigimg{
+	width: 400px;
+	padding-top: 10px;
+	height: 400px;
+	overflow: hidden;
+	text-align: center;
+}
+.content_left .goods_detail .goods_txt{
+	float: left;
+	width: 540px;
+	padding-left: 30px;
+}
+.content_left .goods_detail .goods_txt .goods_name{
+	height: 36px;
+	line-height: 36px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #666;
+	margin-bottom: 10px;
+}
+.goods_detail .goods_price, .goods_detail .goods_feature{
+	padding-top: 20px;
+	border-top: 1px dashed #ddd;
+	margin-bottom: 10px;
+}
+.goods_detail .unit{
+	position: relative;
+	line-height: 30px;
+	height: 30px;
+}
+.goods_detail .unit dt{
+	width: 80px;
+	float: left;
+}
+.goods_detail .unit dd{
+	margin-left: 80px;
+	min-height: 30px;
+}
+.goods_detail .unit .oldprice{
+	text-decoration: line-through;
+	color: #999;
+}
+.goods_detail .price{
+	margin-bottom: 5px;
+	font-family: Tahoma;
+}
+.goods_detail .price dd{
+	color: #dc2425;
+	font-size: 20px;
+	font-weight: bold;
+}
+.goods_detail .price .bigprice{
+	font-size: 28px;
+	font-weight: bold;
+	margin-left: 3px;
+}
+.goods_detail .price .tip{
+	position: relative;
+	top: -4px;
+	left: 5px;
+	padding: 1px 2px;
+	font-size: 12px;
+	background: #e84847;
+	color: #fff;
+	font-weight: normal;
+}
+.co1{
+	background: #f51180;
+	padding: 2px 9px;
+	color: #fff;
+}
+.goods_detail .goods_count{
+	padding-top: 20px;
+	border-top: 1px dashed #ddd;
+	margin-bottom: 20px;
+}
+.goods_detail .unit .count{
+	padding-top: 3px;
+	height: 24px;
+}
+.goods_detail .unit .count .control{
+	float: left;
+	position: relative;
+	height: 24px;
+	width: 82px;
+	display: inline-block;
+}
+.goods_detail .unit .count .control a{
+	display: block;
+	float: left;
+	background: #fff;
+	width: 22px;
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+	border: 1px solid #ddd;
+	font-size: 14px;
+	color: #8c8c8c;
+}
+.goods_detail .unit .count .control .quantity{
+	float: left;
+	width: 32px;
+	height: 22px;
+	line-height: 20px;
+	text-align: center;
+	border: none;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+.goods_detail .unit .count span{
+	margin-left: 10px;
+	float: left;
+	line-height: 24px;
+}
+.goods_detail .goods_otherbtn {
+    padding-top: 20px;
+    padding-left: 80px;
+    border-top: 1px dashed #ddd;
+    margin-bottom: 10px;
+    height: 44px;
+}
+.goods_detail .goods_otherbtn .btn {
+    padding: 15px 20px;
+    font-size: 16px;
+    float: left;
+    margin-right: 20px;
+    display: inline-block;
+    color: #fff;
+    line-height: 14px;
+    background: #dc2425;
+    border-radius: 3px;
+	background-clip: padding-box;
+	border: none;
+}
+.goods_detail .goods_otherbtn .addcart {
+    position: relative;
+    float: left;
+    padding: 15px 20px 15px 35px;
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    line-height: 14px;
+    border-radius: 3px;
+    background-clip: padding-box;
+    border: none;
+    cursor: pointer;
+    background: #404144;
+}
+.goods_detail .goods_otherbtn .addcart i{
+	position: absolute;
+	float: left;
+	top: 12px;
+	left: 14px;
+	display: inline-block;
+	background: url('/myfirstwork/imgs/sprites.png') no-repeat -80px 0;
+	width: 20px;
+	height: 20px;
+}
+.productdetail{
+	border: 1px solid #eee;
+}
+.productdetail .tabsbox{
+	height: 48px;
+	border-bottom: 1px solid #eee;
+}
+.productdetail .tabsbox li{
+	float: left;
+	height: 48px;
+}
+.productdetail .tabsbox li a{
+	display: block;
+	height: 48px;
+	line-height: 48px;
+	padding: 0 35px;
+	font-size: 16px;
+	border-right: 1px solid #eee;
+}
+.productdetail .tabsbox li .active{
+	border-top: 2px solid #dc2425;
+	height: 46px;
+	line-height: 46px;
+	color: #666;
+}
+.productdetail .detailbox{
+	min-height: 500px;
+	padding: 20px;
+}
+.productdetail .detailbox .iframebox{
+	width: 742px;
+	height: 400px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.content_right{
+	width: 250px;
+}
+.content_right .hotgoodslist {
+    border: 1px solid #eee;
+}
+.content_right .hotgoodslist .boxtitle{
+	height: 34px;
+	margin-bottom: 10px;
+	line-height: 34px;
+	padding-left: 14px;
+	font-size: 14px;
+}
+.content_right .hotgoodslist .hotgoodsitem{
+	margin: 0 auto;
+	padding: 0;
+	width: 160px;
+	margin-bottom: 20px;
+}
+.hotgoodsitem .hotimg {
+    height: 160px;
+    width: 160px;
+    overflow: hidden;
+}
+.hotgoodsitem .hotgname {
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.hotgoodsitem .price {
+    line-height: 22px;
+    font-family: Tahoma,Arial;
+    color: #dc2425;
+}
+.hotgoodsitem .price .newprice {
+    font-weight: bold;
+    font-size: 14px;
+}

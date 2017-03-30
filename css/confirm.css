@@ -1,0 +1,245 @@
+/*隐藏商品详情页面*/
+#nav .nav .nav-cate #menulist{
+	display: none;
+	border:1px solid #f8f8f8;
+	border-top:0;
+}
+
+#nav .nav .nav-cate:hover>#menulist{
+	display: block;
+}
+
+
+/*面包屑导航*/
+.breadcrumb {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 14px;
+    color: #999;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
+}
+.breadcrumb li{
+	float: left;
+}
+.breadcrumb li a{
+	color: #8c8c8c;
+}
+.breadcrumb li a:hover{
+	color: #000;
+}
+.breadcrumb li .divider{
+	margin: 0 8px;
+}
+
+
+/*购物车列表*/
+#form_order .plbox{
+	margin-bottom: 20px;
+}
+#form_order .plbox .path{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin: 0 10px;
+	background: #f4f4f4;
+	font-size: 14px;
+}
+#form_order ul li{
+	float: left;
+	width: 23.3%;
+	height: 40px;
+}
+#form_order .plbox .active{
+	background: #dc2425;
+	color: #fff;
+}
+#form_order .confirm_title{
+	height: 36px;
+	line-height: 36px;
+	padding-left: 16px;
+	margin-bottom: 20px;
+	padding-top: 10px;
+	font-size: 18px;
+}
+#form_order .confirm_title span{
+	font-size: 12px;
+	margin-left: 12px;
+	color: #666;
+}
+#form_order .confirm_title span a{
+	color: #8c8c8c;
+}
+#form_order .add_address{
+	padding: 20px 50px;
+}
+#form_order .add_address .row_item{
+	position: relative;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+#form_order .add_address .row_item dt{
+	float: left;
+	width: 100px;
+	line-height: 36px;
+	text-align: right;
+}
+#form_order .add_address .row_item dd{
+	min-height: 36px;
+	line-height: 36px;
+	margin-left: 120px;
+}
+.add_address input {
+    padding: 5px 8px;
+    border: 1px solid #ddd;
+}
+.add_address .need{
+	color: red;
+	margin-left: 10px;
+}
+.add_address select {
+    padding: 5px 8px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+}
+.add_address .input_xlong{
+	width: 350px;
+}
+.add_address .tip{
+	margin-left: 10px;
+	color: #666;
+}
+.add_address .input_small {
+    width: 120px;
+}
+.add_address .checkbox {
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+    border: none;
+}
+.concom{
+	background: #f9f9f9;
+}
+.concom th {
+    background: #f1f1f1;
+    text-align: center;
+    height: 40px;
+}
+.concom tbody tr{
+	text-align: center;
+
+}
+.shop_item {
+    margin: 10px 20px;
+}
+.shop_item dt{
+    float: left;
+    width: 80px;
+}
+.shop_item dd{
+	margin-left: 100px;
+	min-height: 80px;
+}
+.shop_item dd p {
+    margin: 0 0 10px 0;
+    text-align: left;
+}
+.shop_item dd .co2{
+	background: #3477fc;
+	padding: 2px 9px;
+	color: #fff;
+}
+.common {
+    margin-bottom: 30px;
+}
+.common .common_item {
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+}
+.common .common_item.act{
+	border: 2px solid #dc2425;
+}
+.common .common_item dt {
+    float: left;
+    width: 150px;
+    line-height: 44px;
+    font-weight: bold;
+    text-align: center;
+}
+.common .common_item dd{
+	margin-left: 170px;
+}
+.common .common_item dd p{
+	padding: 13px 0;
+}
+.common .common_item dd p span{
+	color: #dc2425;
+}
+.remarkbox {
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.remarkbox dt {
+    float: left;
+    width: 150px;
+    line-height: 44px;
+    font-weight: bold;
+    text-align: center;
+}
+.remarkbox dd {
+    margin-left: 170px;
+}
+.remark {
+    width: 830px;
+    height: 70px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+.pay {
+    line-height: 30px;
+    font-size: 14px;
+    padding-right: 20px;
+    text-align: right;
+}
+.pay .mainfont {
+    font-weight: bold;
+    font-size: 18px;
+    color: #dc2425;
+}
+.pay #sum{
+	margin-top: 20px;
+	padding-top: 10px;
+	border-top:1px solid #ddd;
+}
+.pay #sum .mainfont{
+	font-size: 22px;
+}
+.submitbox {
+    text-align: right;
+    height: 80px;
+    line-height: 80px;
+}
+.submitbox .btn{
+	padding: 12px 42px;
+	margin-left: 30px;
+	display: inline-block;
+	color: #fff;
+	font-size: 14px;
+	line-height: 14px;
+	background: #dc2425;
+	border-radius: 3px;
+	background-clip: padding-box;
+	border: none;
+	cursor: pointer;
+}
+
+
+
+
+
+

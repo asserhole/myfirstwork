@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手机工坊</title>
+	<link rel="stylesheet" href="/myfirstwork/css/base.css">
+	<link rel="stylesheet" href="/myfirstwork/css/reset.css">
+	<link rel="stylesheet" href="/myfirstwork/css/products.css">
+	<script src="/myfirstwork/js/jquery-1.12.4.min.js"></script>
+	<script src="/myfirstwork/js/index.js"></script>
+	<script src="/myfirstwork/js/jquery.cookie.js"></script>
+	<script src="/myfirstwork/js/jquery.lazyload.js"></script>
+	<script src="/myfirstwork/js/jquery.fly.min.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="container top" id="header"></div>
+	
+
+
+	<!-- 导航 -->
+	<div class="nav-wrap" id="nav"></div>
+
+
+
+	<!-- 面包屑导航 -->
+	<ul class="container breadcrumb">
+		<li>您当前的位置：&nbsp;</li>
+		<li><a href="/myfirstwork/index.html">首页</a><span class="divider">>></span></li>
+		<li>工坊商城</li>
+	</ul>
+
+
+
+
+	<!-- 商品筛选 -->
+	<div class="container filterbox">
+		<div class="filtertitle">
+			商品筛选
+			<span class="smallcount">
+				(共<b>990</b>个商品)
+			</span>
+		</div>
+		<dl class="filteritem">
+			<dt>机型：</dt>
+			<dd>
+				<div class="rowitem">
+					<a href="javascript:;" class="active">全部</a>
+					<a href="javascript:;">苹果</a>
+					<a href="javascript:;">三星</a>
+					<a href="javascript:;">小米</a>
+					<a href="javascript:;">魅族</a>
+					<a href="javascript:;">华为</a>
+					<a href="javascript:;">OPPO</a>
+					<a href="javascript:;">VIVO</a>
+					<a href="javascript:;">中兴</a>
+					<a href="javascript:;">其他</a>
+				</div>
+				<div class="rowitem">
+					<a href="javascript:;">iPhone 7 保护壳</a>
+					<a href="javascript:;">iPhone 7 Plus 保护壳</a>
+					<a href="javascript:;">iPhone 6S/6 保护壳</a>
+					<a href="javascript:;">iPhone 6S Plus/6 Plus 保护壳</a>
+					<a href="javascript:;">iPhone SE/5S/5 保护壳</a>
+					<a href="javascript:;">三星 S7 保护壳</a>
+					<a href="javascript:;">三星 S7 EDGE 保护壳</a>
+					<a href="javascript:;">三星 S6 保护壳</a>
+					<a href="javascript:;">三星 S6 EDGE 保护壳</a>
+					<a href="javascript:;">三星 S6 EDGE+ 保护壳</a>
+					<a href="javascript:;">三星 A7 保护壳</a>
+					<a href="javascript:;">三星 A5 保护壳</a>
+					<a href="javascript:;">三星 A3 保护壳</a>
+					<a href="javascript:;">三星 Note 4 保护壳</a>
+					<a href="javascript:;">三星 Note 4 电池盖</a>
+					<a href="javascript:;">三星 S5/I9600 电池盖</a>
+					<a href="javascript:;">三星 Note 3 电池盖</a>
+					<a href="javascript:;">三星 Note 2 电池盖</a>
+					<a href="javascript:;">三星 Note 2 保护壳</a>
+					<a href="javascript:;">小米 5 保护壳</a>
+					<a href="javascript:;">小米 4C 保护壳</a>
+					<a href="javascript:;">小米 4 保护壳</a>
+					<a href="javascript:;">小米 红米2 保护壳</a>
+					<a href="javascript:;">小米 红米NOTE 2 保护壳</a>
+					<a href="javascript:;">小米 Note 保护壳</a>
+					<a href="javascript:;">OPP0 R7 保护壳</a>
+					<a href="javascript:;">OPPO R3 保护壳</a>
+					<a href="javascript:;">OPPO Find7 保护壳</a>
+					<a href="javascript:;">VIVO X5L 保护壳</a>
+					<a href="javascript:;">VIVO Xshot 保护壳</a>
+					<a href="javascript:;">VIVO X3L 保护壳</a>
+					<a href="javascript:;">一加 2 保护壳</a>
+					<a href="javascript:;">一加 One 保护壳</a>
+					<a href="javascript:;">中兴 星星一号 保护壳</a>
+					<a href="javascript:;">努比亚 Z7 MAX 保护壳</a>
+					<a href="javascript:;">努比亚 Z7 MINI 保护壳</a>
+					<a href="javascript:;">努比亚 Z5S 保护壳</a>
+					<a href="javascript:;">索尼 Z3 保护壳</a>
+					<a href="javascript:;">魅族 PRO 5 保护壳</a>
+					<a href="javascript:;">魅族 魅蓝2 保护壳</a>
+					<a href="javascript:;">魅族 MX4 保护壳</a>
+					<a href="javascript:;">魅族 MX3 保护壳</a>
+					<a href="javascript:;">魅族 MX4 pro 保护壳</a>
+					<a href="javascript:;">魅蓝 Note 保护壳</a>
+					<a href="javascript:;">华为 P8 保护壳</a>
+					<a href="javascript:;">华为 P7 保护壳</a>
+					<a href="javascript:;">华为 P6 保护壳</a>
+					<a href="javascript:;">华为 Mate7 保护壳</a>
+					<a href="javascript:;">华为 荣耀4C 保护壳</a>
+					<a href="javascript:;">华为 荣耀6 保护壳</a>
+				</div>
+			</dd>
+		</dl>
+		<dl class="filteritem">
+			<dt>风格：</dt>
+			<dd>
+				<div class="rowitem">
+					<a href="javascript:;" class="active">全部</a>
+					<a href="javascript:;">热卖精品</a>
+					<a href="javascript:;">经典主流</a>
+					<a href="javascript:;">影视动漫</a>
+					<a href="javascript:;">铭牌标志</a>
+					<a href="javascript:;">文化艺术</a>
+					<a href="javascript:;">人物形象</a>
+					<a href="javascript:;">体育运动</a>
+					<a href="javascript:;">动物植物</a>
+					<a href="javascript:;">其它风格</a>
+				</div>
+			</dd>
+		</dl>
+		<dl class="filteritem">
+			<dt>工艺：</dt>
+			<dd>
+				<div class="rowitem">
+					<a href="javascript:;" class="active">全部</a>
+					<a href="javascript:;">彩绘</a>
+					<a href="javascript:;">浮雕</a>
+					<a href="javascript:;">彩钻</a>
+				</div>
+			</dd>
+		</dl>
+	</div>
+
+
+
+	<!-- 商品列表 -->
+	<ul class="container productslist clr">
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (1).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-圣诞招财</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c1">彩绘</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (2).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-什么鬼</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c1">彩绘</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (3).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-二愣子</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (4).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-女神经</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c1">彩绘</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (5).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-兔子乖乖</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c1">彩绘</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (6).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-奔跑吧 松鼠</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (7).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-奔跑吧 小黄鸭</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c1">彩绘</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (8).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-不务正业</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (9).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-逢考必过</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c1">彩绘</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (10).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-装逼</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (11).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-啥东西</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c1">彩绘</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (12).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-安静的女子</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (13).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-飞翔吧 猴子</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c1">彩绘</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (14).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-猎狗</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (15).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-玛尼玛尼哄</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c1">彩绘</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (16).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-情侣猫</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (17).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-扑克牌</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c1">彩绘</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (18).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-恭喜发财</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (19).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-钢琴</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c1">彩绘</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (20).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-圣诞快乐</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (21).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-冬天来了</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (22).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-小老鼠</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (23).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-傻狍子</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (24).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-冬天 快乐</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c1">彩绘</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (25).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-大力水手</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (26).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-冬天来了</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (27).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-小老鼠</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (28).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-傻狍子</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (29).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-冬天 快乐</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c1">彩绘</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (30).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-大力水手</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (31).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-冬天来了</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (32).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-小老鼠</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (33).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-傻狍子</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (34).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-冬天 快乐</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c1">彩绘</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (35).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-大力水手</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (36).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-冬天来了</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (37).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-小老鼠</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (38).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-傻狍子</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (39).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-冬天 快乐</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c1">彩绘</div>
+			</div>
+		</li>
+		<li>
+			<div class="goodsitem">
+				<div class="ipic">
+					<a href="/myfirstwork/html/product/1.html"><img class="lazy" width="230" height="230" data-original="/myfirstwork/imgs/l/p (40).jpg" alt=""></a>
+				</div>
+				<div class="iprice">
+					￥<span class="price">49</span>元
+					<span class="oldprice">￥99.00</span>
+				</div>
+				<div class="iother">
+					<div class="iname">
+						<a href="/myfirstwork/html/product/1.html">iPhone 6S/6 保护壳-大力水手</a>
+					</div>
+					<div class="ibtn">
+						<a href="javascript:;" class="addcart">
+							<i class="icon-shopcart"></i>
+						</a>
+					</div>
+				</div>
+				<div class="itag c2">浮雕</div>
+			</div>
+		</li>
+	</ul>
+
+
+
+
+
+	<!-- 分页 -->
+	<div class="container pagination pacenter">
+		<ul>
+			<li>
+				<div class="pagination">
+					<label class="pagination">
+						共
+						<strong style="color:red">990</strong>
+						条
+					</label>
+					<label class="pagination">
+						每页
+						<strong style="color:red">40</strong>
+						条
+					</label>
+					<label class="pagination">
+						共
+						<strong style="color:red">25</strong>
+						页
+					</label>
+					<span class="disabled"><<</span>
+					<span class="disabled"><</span>
+					<span class="current">1</span>
+					<a href="/myfirstwork/html/products/products_2.html">2</a>
+					<a href="javascript:;">3</a>
+					<a href="javascript:;">4</a>
+					<a href="javascript:;">5</a>
+					<a href="javascript:;">6</a>
+					<a href="javascript:;">7</a>
+					<a href="javascript:;">8</a>
+					<a href="javascript:;">9</a>
+					<a href="javascript:;">></a>
+					<a href="javascript:;">>></a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+
+
+	
+
+
+
+
+	
+	<!-- footer -->
+	<div class="footer container" id="footer"></div>
+
+	<script>
+		$('#footer').load('/myfirstwork/html/base/footer.html');
+		$('#nav').load('/myfirstwork/html/base/nav.html');
+
+		$.ajax('/myfirstwork/html/base/header.html').done(function  (data) {
+			$.cookie.json = true;
+			var user = $.cookie('loginuser') || {};
+			if($.isEmptyObject(user)){
+				$(data).appendTo('#header');
+			}else{
+				$(data).appendTo('#header').find('#login').html('<span>Hi,<a href="/myfirstwork/html/product/1.html" style="padding:0;font-weight:bold">[ '+user.username+' ]</a></span><em>|</em><a href="javascript:;" id="eixt">退出</a>');
+				$('#eixt').click(function  () {
+					$.cookie.json = true;
+					$.cookie('loginuser',null,{expires:-7, path:'/'});
+
+					window.location = '/myfirstwork/index.html';
+				})
+			}
+
+			shopcartcount();
+			
+		})
+
+
+		$('.addcart').click(function  (e) {
+			var _tr = $(this).parents('.goodsitem');
+
+			var _src = _tr.find('img').prop('src');
+
+			var _price = _tr.find('.price').text();
+
+			var _name = _tr.find('.iname').text();
+
+			var _id = '416-A488546';
+
+			var _count = 1;
+
+			$.cookie.json = true;
+
+			var _products = $.cookie('products') || [];
+
+			var index = exist(_src, _products);
+
+			if(index === -1){
+				_products.push({
+					src: _src,
+					name: _name,
+					id: _id,
+					price: _price,
+					count: _count
+
+				})
+			}else{
+				_products[index].count++;
+			}
+
+			$.cookie('products', _products, {expires:7,path:'/'});
+
+			var $fly = $('<img src="/myfirstwork/imgs/ball.gif" style="z-index:201">');
+
+			$fly.fly({
+				start:{
+					left: e.pageX,
+					top: e.pageY - $(window).scrollTop()
+				},
+				end:{
+					left: $('#shopcartbtn').offset().left+16,
+					top: $('#shopcartbtn').offset().top - $(window).scrollTop()+6,
+					width: 25,
+					height: 25
+				},
+				speed: 1.6,
+				onEnd: function(){
+					$fly.remove();
+				}
+			})
+
+
+			shopcartcount();
+			
+
+		})
+		
+
+
+
+		// 函数
+		function exist (_src,arr) {
+			for(var i=0;i<arr.length;i++){
+				if(arr[i].src === _src){
+					return i;
+				}
+			}
+			return -1;
+		}
+
+
+		function shopcartcount () {
+			$.cookie.json = true;
+
+			var _products = $.cookie('products') || [];
+			if(_products.length !== 0){
+				var num = 0;
+				$.each(_products, function  (i, ele) {
+					num += ele.count;
+				})
+
+				$('#cart_num').text(num);
+
+			}
+		}
+
+		// 吸顶菜单
+		var topMain=$("#header").height()-20;
+		
+		$(window).scroll(function(){
+
+		    if ($(window).scrollTop()>topMain){
+		        $("#header").addClass("scroll");
+
+		    }else{
+		        $("#header").removeClass("scroll");
+		    }
+		});
+
+
+
+		//懒加载
+		$(function  () {
+			$('img.lazy').lazyload({
+				effect:"fadeIn",
+				threshold: -200
+
+			})
+		})
+
+		
+
+
+
+		
+	</script>
+</body>
+</html>

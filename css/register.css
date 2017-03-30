@@ -1,0 +1,100 @@
+/*隐藏商品详情页面*/
+#nav .nav .nav-cate #menulist{
+	opacity: 0;
+	border:1px solid #f8f8f8;
+	border-top:0;
+	transition:.5s .1s;
+}
+
+#nav .nav .nav-cate:hover>#menulist{
+	opacity: 1;
+}
+
+
+
+
+
+/*注册*/
+.l_form{
+	width: 320px;
+	height: 420px;
+	margin: 0 auto;
+	padding-top:90px;
+}
+.l_form .input_dl dt {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    font-family: "微软雅黑";
+}
+.l_form .input_dl dd {
+    position: relative;
+    margin-bottom: 24px;
+}
+.l_form .input_dl .text{
+	background: #fff;
+	width: 298px;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	padding: 12px 10px;
+	border: 1px solid #e6e6e6;
+	border-radius: 6px;
+	color: #333;
+	font-size: 14px;
+	outline: none;
+}
+.l_form .input_dl dd p {
+    position: absolute;
+    line-height: 24px;
+    color: #dc2425;
+}
+#reg_uname,#reg_email{
+	display: none;
+}
+#reg_form .states{
+	margin-bottom: 10px;
+}
+#reg_form p a{
+	color: #8c8c8c;
+}
+.enter{
+
+	position: relative;
+}
+.l_form .btn{
+	width: 100%;
+	display: block;
+	font-size: 16px;
+	line-height: 30px;
+	padding: 7px 16px;
+	color: #fff;
+	background: #dc2425;
+	border-radius: 3px;
+	background-clip: padding-box;
+	border: none;
+	cursor: pointer;
+	outline:none;
+}
+.l_form .btn:hover{
+	background: #c72021;
+}
+.l_form .tr{
+	font-size: 14px;
+	margin-top: 17px;
+}
+._info{
+	position: absolute;
+	width: 200px;
+	left:330px;
+	top:14px;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: "微软雅黑";
+
+}
+#register_info{
+	width: 350px;
+	color:red;
+	top:4px;
+}

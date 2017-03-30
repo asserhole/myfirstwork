@@ -1,0 +1,254 @@
+
+
+
+
+
+
+
+
+
+
+
+
+/*banner图*/
+.banner{
+	height: 400px;
+}
+.banner .slide{
+	width: 750px;
+	height: 400px;
+	position: relative;
+	margin-left: 250px;
+	overflow: hidden;
+}
+#imgs{
+	position: absolute;
+	top:0;
+	left:0;
+	
+}
+#imgs li{
+	float: left;
+}
+#dots{
+	position: absolute;
+	bottom: 12px;
+	left:308px;
+	width: 122px;
+	padding: 3px 5px 3px 15px;
+	border-radius: 8px;
+
+}
+#dots li{
+	float: left;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #999;
+	margin-right: 10px;
+	cursor:pointer;
+}
+#dots .act{
+	background: #e35051;
+}
+.banner .slide a{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 40px;
+	text-align: center;
+	opacity:0.2;
+	filter:alpha(opacity:20);
+	top:180px;
+	display: none;
+}
+.banner .slide a:hover{
+	opacity:0.8;
+	filter:alpha(opacity:80);
+}
+#prev{
+	left:0;
+}
+#next{
+	right: 0;
+}
+.banner .bannerright{
+	width: 250px;
+	height: 400px;
+}
+.banner .bannerright .br-item{
+	width: 250px;
+	height: 200px;
+}
+/*banner end*/
+
+/*main*/
+.main h2{
+	font-size: 18px;
+	font-weight: bold;
+	color: #181818;
+	padding-top: 30px;
+	margin-bottom: 10px;
+	padding-left: 20px;
+	font-family: "黑体";
+}
+.main .hotlist li{
+	width: 250px;
+	margin-bottom: 20px;
+	float: left;
+}
+.goodsitem{
+	position: relative;
+	border: 5px solid #fff;
+	width: 240px;
+	font-family: "微软雅黑";
+}
+.goodsitem .ipic{
+	margin: 5px;
+	width: 230px;
+	height: 230px;
+}
+.goodsitem .ipic a{
+	display: block;
+	width: 230px;
+	height: 230px;
+	overflow: hidden;
+}
+.goodsitem .ipic a img{
+	height: 230px;
+	transition: .7s;
+}
+.ipic:hover>a img{
+	transform: scale(1.5);
+
+}
+.goodsitem .iprice{
+	height: 28px;
+	line-height: 28px;
+	color: #dc2425;
+	padding: 0 5px;
+}
+.goodsitem .iprice .price{
+	font-size: 20px;
+	font-weight: bold;
+	margin-right: 4px;
+}
+.goodsitem .iprice .oldprice{
+	color: #666;
+	margin-left: 10px;
+	text-decoration: line-through;
+}
+.goodsitem .iother{
+	padding: 0 5px;
+	height: 22px;
+	line-height: 22px;
+	position: relative;
+}
+.goodsitem .iother .iname{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-right: 30px;
+}
+.goodsitem .iother .iname a{
+	color: #8c8c8c;
+}
+.goodsitem .iother .ibtn{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: -20px;
+	right: 5px;
+}
+.goodsitem .iother .ibtn a{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 3px;
+    background: #404144;
+
+}
+.goodsitem .iother .ibtn a i{
+	top:4px;
+}
+.icon-shopcart {
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    background: url('/myfirstwork/imgs/sprites.png') no-repeat -80px 0;
+    width: 20px;
+    height: 20px;
+}
+.itag{
+	position: absolute;
+	top: 20px;
+	left: 0;
+	width: 45px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+}
+.c1{
+	background: #f51180;
+}
+.c1:after{
+	position: absolute;
+	display: table;
+	line-height: 0;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	font-size: 0;
+	content: "";
+	top: 20px;
+	right: 41px;
+	border-color: #f51180 #f51180 transparent transparent;
+	border-style: solid;
+	border-width: 2px 2px 3px 2px;
+}
+.c2{
+	background: #3477fc;
+}
+.c2:after{
+	position: absolute;
+	display: table;
+	line-height: 0;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	font-size: 0;
+	content: "";
+	top: 20px;
+	right: 41px;
+	border-color: #3477fc #3477fc transparent transparent;
+	border-style: solid;
+	border-width: 2px 2px 3px 2px;
+}
+.ad{
+	height: 140px;
+	margin-top: 20px;
+}
+.ad .ad1{
+	width: 360px;
+	float: left;
+}
+.ad .ad2{
+	width: 230px;
+	float: left;
+	margin-left: 60px;
+}
+.main h2 span{
+	color: #999;
+	font-size: 12px;
+	font-weight: normal;
+	margin-left: 20px;
+}
+/*main end*/
+

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手机工坊</title>
+	<link rel="stylesheet" href="/myfirstwork/css/base.css">
+	<link rel="stylesheet" href="/myfirstwork/css/reset.css">
+	<link rel="stylesheet" href="/myfirstwork/css/cart.css">
+	<script src="/myfirstwork/js/jquery-1.12.4.min.js"></script>
+	<script src="/myfirstwork/js/index.js"></script>
+	<script src="/myfirstwork/js/jquery.cookie.js"></script>
+	<script src="/myfirstwork/js/template-native.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="container top" id="header"></div>
+	
+
+
+	<!-- 导航 -->
+	<div class="nav-wrap" id="nav"></div>
+
+
+
+
+
+
+
+
+	<!-- 面包屑导航 -->
+	<ul class="container breadcrumb">
+		<li>您当前的位置：&nbsp;</li>
+		<li><a href="/myfirstwork/index.html">首页</a><span class="divider">>></span></li>
+		<li>购物车</li>
+	</ul>
+
+
+
+
+
+	<!-- 我的购物车 -->
+	<div class="container cart">
+		<div class="cart_state">
+			我的购物车
+			<span>(全场包邮，港澳台除外；周一至周六每天22:00前下单支付，次日18:00前完成发货，其它假日顺延一天)</span>
+		</div>
+		<div class="cart_title clr">
+			<div class="col col_1">商品信息</div>
+			<div class="col col_2">单价(元)</div>
+			<div class="col col_3">数量(件)</div>
+			<div class="col col_4">小计(元)</div>
+			<div class="col col_5">操作</div>
+		</div>
+
+		<div id="shopcartlist">
+			
+		</div>
+
+		<div class="shop_count">
+			<a href="javascript:void(0);">
+				<img src="/myfirstwork/imgs/im_qq.gif">
+			</a>
+			商品总计：
+			<span>
+				<strong>
+					￥
+					<label id="totalmoney">0</label>
+					.00
+				</strong>
+			</span>
+		</div>
+
+		<div class="shop_other clr">
+			<ul>
+				<li>
+					<a href="javascript:;" id="clearcart">清空购物车</a>
+				</li>
+			</ul>
+			<div class="shop_mainbox">
+				<a href="/myfirstwork/html/products.html">继续购物</a>
+				<a href="/myfirstwork/html/confirm.html" class="btn">去结账</a>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	
+	
+
+
+	
+
+
+
+
+	
+	<!-- footer -->
+	<div class="footer container" id="footer"></div>
+
+
+
+	<!-- 模板: artTemplate模板引擎 -->
+	<script type="text/html" id="temp">
+		
+
+
+		<% for (var i = 0; i < products.length; i++) { %>
+			<div class="item_row clr">
+				<div class="col col_1">
+					<dl class="shop_goods">
+						<dt class="sg_img">
+							<img src="<%= products[i].src %>" width="150" height="150">
+						</dt>
+						<dd class="sg_info">
+							<div class="sg_name"><i><%= products[i].name %></i>
+							<span class="co2">浮雕</span></div>
+							<div class="sg_other" style="margin-top:15px">
+								<div class="sg_txt"><%= products[i].id %>
+								</div>
+							</div>
+							<div class="sg_other">选择材质：
+								<select style="width:122px;">
+									<option value="562">PC硬壳 (透明)</option>
+									<option value="563">TPU软壳(透明)</option>
+								</select>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<div class="col col_2">
+					<p style="padding-top:40px;">￥<%= products[i].price %>.00</p>
+				</div>
+				<div class="col col_3">
+					<div class="count">
+						<div class="control">
+							<a href="javascript:;" class="minus">-</a><input type="text" maxlength="3" value="<%= products[i].count %>" class="quantity"><a href="javascript:;" class="plus">+</a>
+						</div>
+					</div>
+				</div>
+				<div class="col col_4">
+					￥
+					<label class="xiaoji"><%= products[i].price*products[i].count %></label>
+					.00
+				</div>
+				<div class="col col_5">
+					<a href="javascript:;" class="removecart">删除</a>
+				</div>
+			</div>
+
+		<% } %>
+	</script>
+
+	<script>
+		$('#footer').load('/myfirstwork/html/base/footer.html');
+		$('#nav').load('/myfirstwork/html/base/nav.html');
+
+
+
+
+		//判断是否登录
+		$.ajax('/myfirstwork/html/base/header.html').done(function  (data) {
+			$.cookie.json = true;
+			var user = $.cookie('loginuser') || {};
+			if($.isEmptyObject(user)){
+				$(data).appendTo('#header');
+			}else{
+				$(data).appendTo('#header').find('#login').html('<span>Hi,<a href="/myfirstwork/html/product/1.html" style="padding:0;font-weight:bold">[ '+user.username+' ]</a></span><em>|</em><a href="javascript:;" id="eixt">退出</a>');
+				$('#eixt').click(function  () {
+					$.cookie.json = true;
+					$.cookie('loginuser',null,{expires:-7, path:'/'});
+
+					window.location = '/myfirstwork/index.html';
+				})
+			}
+
+			shopcartcount();
+
+			
+		})
+		
+
+		
+		/*测试用
+		$.cookie('products',[{
+			src: '/myfirstwork/imgs/l/p (12).jpg',
+			name: 'iPhone 6S/6 保护壳-安静的女子',
+			id: '商品编号：416-A488546',
+			count: 1,
+			price: 49
+		},{
+			src: '/myfirstwork/imgs/l/p (12).jpg',
+			name: 'iPhone 6S/6 保护壳-安静的女子',
+			id: '商品编号：416-A488546',
+			count: 1,
+			price: 49
+		}])
+		*/
+
+		
+		//初始化购物车
+		$.cookie.json = true;
+		var _products = $.cookie('products') || {};
+		if($.isEmptyObject(_products)){
+			alert('购物车空空如也~快去选购商品吧。');
+			window.location = '/myfirstwork/index.html';
+		}else{
+			var data = {
+				products : _products
+			};
+
+			var html = template('temp', data);
+			$('#shopcartlist').html(html);
+
+			
+
+			//遍历cookie，将每个商品的基本信息放入product属性中
+			//此处.eq(i)易遗漏！！！
+			$.each(_products, function  (i, ele) {
+				$('.item_row').eq(i).data('product', ele);
+			})
+
+			_sum ();
+
+
+			//初始化小计(无效，count读出全为 1);
+			//(直接在arttemplate中初始化)
+			//  var _xiaoji = $('.xiaoji');
+			// $.each(_xiaoji, function  (i, ele) {
+			// 	var _tr = ele.parentNode.parentNode;
+			// 	console.log($(_tr).data('product').count)
+			// 	ele.innerHTML = $(_tr).data('product').count*$(_tr).data('product').price;
+			// 	//ele.innerHTML = _tr.product.count*_tr.product.price;
+			// })
+			
+
+			//想用jQuery隐式迭代做，但好像不行
+			//$('.xiaoji').text($(this).parents('.item_row').product.price*$(this).parents('.item_row').product.count);
+
+		}
+
+		
+		
+
+
+
+		//购物车按钮数量累计
+		function shopcartcount () {
+			$.cookie.json = true;
+
+			var _products = $.cookie('products');
+			
+			if(_products.length !== 0){
+				var num = 0;
+				$.each(_products, function  (i, ele) {
+					num += parseFloat(ele.count);
+				})
+
+				$('#cart_num').text(num);
+
+			}
+		}
+
+		
+
+
+		
+		
+
+		//删除按钮
+		$('.removecart').click(function  () {
+			$.cookie.json = true;
+			var _products = $.cookie('products');
+			var _product = $(this).parents('.item_row').data('product');
+			var index = $.inArray(_product, _products);
+
+			_products.splice(index, 1);
+			$.cookie('products', _products, {expires:7, path:'/'});
+			$(this).parents('.item_row').remove();
+
+			shopcartcount ();
+
+
+
+			//判断购物车是否为空
+			var _products = $.cookie('products') || {};
+			if($.isEmptyObject(_products)){
+				alert('购物车空空如也~快去选购商品吧。');
+				window.location = '/myfirstwork/index.html';
+			}
+		})
+
+
+		//清空购物车按钮
+		$('#clearcart').click(function  () {
+			if(confirm('是否确定清空购物车？')){
+				$.cookie.json = true;
+				$.cookie('products', null, {expires:-7, path:'/'});
+				$('#shopcartlist').html('');
+
+				window.location = '/myfirstwork/index.html';
+			}
+
+		})
+
+
+		//点击-按钮
+		$('#shopcartlist').on('click', '.minus', function  () {
+			var count = $(this).next().val();
+			if(count == 1){
+				return;
+			}else{
+				count--;
+				var _tr = $(this).parents('.item_row');
+				$(this).next().val(count);
+				_tr.data('product').count = count;
+				
+				$.cookie.json = true;
+				$.cookie('products', _products,{expires:7,path:'/'});
+
+				//小计
+				_tr.find('.xiaoji').text(count*_tr.data('product').price);
+
+				shopcartcount ();
+
+			}
+		})
+
+
+		//点击+按钮
+		$('#shopcartlist').on('click', '.plus', function  () {
+			var count = $(this).prev().val();
+
+			count++;
+
+			var _tr = $(this).parents('.item_row');
+			$(this).prev().val(count);
+			
+			_tr.data('product').count = count;
+
+			$.cookie.json = true;
+			$.cookie('products', _products,{expires:7,path:'/'});
+
+			//小计
+			_tr.find('.xiaoji').text(count*_tr.data('product').price);
+
+			shopcartcount ();
+		})
+
+
+		//手动修改数量
+		$('.quantity').blur(function  () {
+			var reg = /^[1-9]\d*$/;
+			var _tr = $(this).parents('.item_row');
+			
+			if(!reg.test($(this).val())){
+				$(this).val(_tr.data('product').count);
+				return;
+			}
+
+			_tr.data('product').count = $(this).val();
+
+			$.cookie.json = true;
+			$.cookie('products', _products,{expires:7,path:'/'});
+			
+			_tr.find('.xiaoji').text($(this).val()*_tr.data('product').price);
+
+			shopcartcount ();
+			
+		})
+
+
+		//总计
+		function _sum () {
+			var sum = 0;
+			var _xiaoji = $('.xiaoji');
+			$.each(_xiaoji, function  (i, ele) {
+				sum += parseFloat(ele.innerHTML);
+			})
+			$('#totalmoney').text(sum);
+		}
+
+
+
+
+		
+
+		
+
+
+
+		
+	</script>
+</body>
+</html>

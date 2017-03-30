@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>手机工坊</title>
+	<link rel="stylesheet" href="/myfirstwork/css/base.css">
+	<link rel="stylesheet" href="/myfirstwork/css/reset.css">
+	<link rel="stylesheet" href="/myfirstwork/css/register.css">
+	<script src="/myfirstwork/js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="container top" id="header"></div>
+	
+
+
+	<!-- 导航 -->
+	<div class="nav-wrap" id="nav"></div>
+
+
+
+	<!-- 注册 -->
+	<div class="container reg">
+		<form id="reg_form" class="l_form">
+			<dl class="input_dl">
+				<dt>用户注册</dt>
+				<dd class="user_dd">
+					<input type="text" id="username" class="text username" name="username" maxlength="16" autocomplete="off" placeholder="用户名" required="true" onkeyup="this.value=this.value.replace(/[^\w]/g,'')">
+					<p>
+						<label for="login_username" id="reg_uname" class="error">用户名由5-16位(字母、数字、下划线)组成,只能以字母开头</label>
+					</p>
+					<span id="username_info" class="_info"></span>
+				</dd>
+				<dd class="user_dd">
+					<input type="text" id="userEmail" class="text userEmail" name="userEmail" maxlength="50" autocomplete="off" placeholder="邮箱" required="true">
+					<p>
+						<label for="login_username" id="reg_email" class="error">请输入正确格式的邮箱,用于找回密码</label>
+					</p>
+					<span id="email_info" class="_info"></span>
+				</dd>
+				<dd class="passw_dd">
+					<input type="password" id="password" class="text password" name="password" maxlength="20" autocomplete="off" placeholder="密码" required="true">
+					<p>
+						<label for="login_password" id="reg_pwd1" class="error" style="display:none">密码输入错误,不能少于6个字符</label>
+					</p>
+					<span id="password_info" class="_info"></span>
+				</dd>
+				<dd class="passw_dd">
+					<input type="password" id="pwd" class="text password" name="password" maxlength="20" autocomplete="off" placeholder="确认密码" required="true">
+					<p>
+						<label for="login_password" id="reg_pwd2" class="error" style="display:none">两次密码输入不一致</label>
+					</p>
+					<span id="pwd_info" class="_info"></span>
+				</dd>
+			</dl>
+			<p class="states">
+				看过并同意
+				<a href="javascript:;">《手机工坊用户协议》</a>
+			</p>
+			<div class="enter">
+				<input type="submit" value="立即注册" class="btn" id="btnRegister">
+				<span id="register_info" class="_info"></span>
+			</div>
+			<p class="tr">
+				已有账号？
+				<a href="/myfirstwork/html/login.html">登录</a>
+			</p>
+		</form>
+	</div>
+	
+
+
+
+
+	
+
+
+
+	<!-- footer -->
+	<div class="footer container" id="footer"></div>
+
+	<script>
+		$(function  () {
+			
+		
+			$('#header').load('/myfirstwork/html/base/header.html');
+			$('#footer').load('/myfirstwork/html/base/footer.html');
+			$('#nav').load('/myfirstwork/html/base/nav.html');
+
+			var isExist = true;
+			var re_email = false;
+			var re_password = false;
+			var pwd_eq = false;
+
+			$('#username').blur(function  () {
+				var re = /^[a-zA-Z]\w{4,15}/;
+				if(re.test($(this).val())){
+					$.getJSON('/myfirstwork/php/user.php',{username:$(this).val()},function  (data) {
+						if(data.status === 1){
+							$('#username_info').text('×用户名已被注册').css('color','red');
+							isExist = true;
+						}else{
+							$('#username_info').text('√').css('color','green');
+							isExist = false;
+						}
+					})
+				}else{
+					$('#reg_uname').show();
+				}
+			})
+
+			$('#username').focus(function  () {
+				$('#reg_uname').hide();
+				$('#username_info').text('');
+
+			})
+
+
+
+			$('#userEmail').blur(function  () {
+				var re = /^\w+@[0-9a-z]+\.[a-z]{2,4}$/;
+				if(re.test($(this).val())){
+					$('#email_info').text('√').css('color','green');
+					re_email = true;
+				}else{
+					$('#reg_email').show();
+					re_email = false;
+				}
+			})
+
+			$('#userEmail').focus(function  () {
+				$('#reg_email').hide();
+				$('#email_info').text('');
+			})
+
+
+			$('#password').blur(function  () {
+				if($(this)[0].value.length<6){
+					$('#reg_pwd1').show();
+					re_password = false;
+				}else{
+					$('#password_info').text('√').css('color','green');
+					re_password = true;
+				}
+			})
+
+			$('#password').focus(function  () {
+				$('#reg_pwd1').hide();
+				$('#password_info').text('');
+			})
+
+
+			$('#pwd').blur(function  () {
+				if($(this).val() === $('#password').val()){
+					pwd_eq = true;
+					$('#pwd_info').text('√').css('color','green');
+				}else{
+					$('#reg_pwd2').show();
+					pwd_eq = false;
+				}
+			})
+
+			$('#pwd').focus(function  () {
+				$('#reg_pwd2').hide();
+				$('#pwd_info').text('');
+			})
+
+			
+
+			$('#btnRegister').click(function  () {
+				if(!isExist && re_email && re_password && pwd_eq){
+					$.post('/myfirstwork/php/register.php',
+					{
+						username:$('#username').val(),
+						email:$('#userEmail').val(),
+						password:$('#password').val()
+					},
+					function  (data) {
+						if(data.status === 1){
+							alert("恭喜您，注册成功！");
+							window.location = '/myfirstwork/html/login.html';
+						}else{
+							$('#register_info').text('*用户注册失败，' + data.massage +' 请联系客服！');
+						}
+					},"json");
+					isExist = true;
+				}
+				return false;
+			})
+		})
+
+
+
+		
+	</script>
+</body>
+</html>
