@@ -273,7 +273,19 @@
 			$.cookie.json = true;
 			var _products = $.cookie('products');
 			var _product = $(this).parents('.item_row').data('product');
-			var index = $.inArray(_product, _products);
+			//此处data读出的商品详情缓存与cookie中商品对象详情虽然内容相等，但指向不同，因此用
+			//$.inArray(_product, _products)总是会返回-1.
+			//此时应该通过对象的某个属性值相等来返回此商品在cookie中索引值。
+			
+
+			var index = -1;
+			for(var i in _products){
+				if (_products[i].name === _product.name) {
+					index = i;
+				}
+			}
+			
+			
 
 			_products.splice(index, 1);
 			$.cookie('products', _products, {expires:7, path:'/'});
